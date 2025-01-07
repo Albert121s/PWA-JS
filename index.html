@@ -19,17 +19,44 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="index.html" id="home-link">Home</a></li>
                 <li><a href="#" id="about-link">About</a></li>
-                <li><a href="#" id="add-meme-link">Add Meme</a></li>
+                <li><a href="#" id="dog-memes-link">Dog Memes</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <main id="main-content">
-            <!-- Content will be dynamically loaded here -->
+            <h1 class="title">Cat Memes Gallery</h1>
+            <div class="gallery">
+                <img src="https://storage.googleapis.com/pod_public/1300/151089.jpg" alt="Cat Meme" style="max-width: 500px; width: 100%;">
+                <img src="https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200" alt="Cat Domination Meme" style="max-width: 500px; width: 100%;">
+                <img src="https://felidaefund.org/media/cache/autosized/images/igallery/original/201-300/pallas-cat-1-250-384.webp" alt="Cat Cost Meme" style="max-width: 500px; width: 100%;">
+                <img src="https://www.rspca.org.uk/documents/1494939/7712581/1181276-tortoise-shell-cat-on-garden-chair-banner_990x350.jpg/68a1a677-e8de-383f-3941-077b015d3954?t=1654001110997&imagePreview=1" alt="Paint Cat Meme" style="max-width: 500px; width: 100%;">
+                <img src="https://nypost.com/wp-content/uploads/sites/2/2022/06/reddit-cats-judging-looks-00.jpg?quality=75&strip=all&w=1200" alt="Meme 1" style="max-width: 500px; width: 100%;">
+                <img src="https://live-production.wcms.abc-cdn.net.au/e7568587b033fe45a5a26e4434cb7682?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=0&width=862&height=485" alt="Meme 2" style="max-width: 500px; width: 100%;">
+                <img src="https://media.istockphoto.com/id/1361394182/pl/zdj%C4%99cie/%C5%9Bmieszny-brytyjski-portret-kota-kr%C3%B3tkow%C5%82osego-wygl%C4%85daj%C4%85cy-na-zszokowanego-lub-zaskoczonego.jpg?s=612x612&w=0&k=20&c=m5IbxePggraWXl7HbEEnGznpS7lqRabSDrCM9RKOrZI=" alt="Meme 3" style="max-width: 500px; width: 100%;">
+            </div>
         </main>
     </div>
-    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('about-link').addEventListener('click', () => {
+            document.getElementById('main-content').innerHTML = `
+                <h1 class="title">About</h1>
+                <p class="par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            `;
+        });
+
+        document.getElementById('dog-memes-link').addEventListener('click', () => {
+            document.getElementById('main-content').innerHTML = `
+                <h1 class="title">Dog Memes</h1>
+                <div class="gallery">
+                    <img src="https://cdn-fpbjb.nitrocdn.com/BgnUcCadFhrlhRbGUXsTJeHYOawZbpXn/assets/images/optimized/rev-8443469/hearingsense.com.au/wp-content/uploads/2022/01/8-Fun-Facts-About-Your-Dog-s-Ears-1024x512.webp" alt="Dog Meme 1" style="max-width: 500px; width: 100%;">
+                    <img src="https://i0.wp.com/www.petcarevets.ie/wp-content/uploads/2019/06/dog-friendly-holidays-north-devon.jpg?fit=849%2C565&ssl=1&resize=350%2C200" alt="Dog Meme 2" style="max-width: 500px; width: 100%;">
+                    <img src="https://static.wixstatic.com/media/625028_9075faef22ad4ef5883bb886069ada6b~mv2.png/v1/fill/w_980,h_757,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/625028_9075faef22ad4ef5883bb886069ada6b~mv2.png" alt="Dog Meme 3" style="max-width: 500px; width: 100%;">
+                </div>
+            `;
+        });
+    </script>
 </body>
 </html>
